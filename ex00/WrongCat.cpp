@@ -12,19 +12,33 @@
 
 #include "WrongCat.hpp"
 
-WrongCat::WrongCat()
+WrongCat::WrongCat() : WrongAnimal()
 {
-    std::cout << "WrongCat :: Default constructor called" << std::endl;
+    std::cout << "WrongCat:: Default constructor Called !!!!" << std::endl;
+    this->type = "ouahdina";
 }
 
 WrongCat::~WrongCat()
 {
-    std::cout << "WrongCat :: Default destructor Called !!!!" << std::endl;
+    std::cout << "WrongCat:: Default destructor Called !!!" << std::endl;
 }
 
-WrongCat::WrongCat(const WrongCat &cat)
+
+WrongCat::WrongCat(const WrongCat &objet) : WrongAnimal(objet)
 {
-    std::cout << "WrongCat :: Default Copy constrcutor Called "
+    std::cout << "WrongCat:: Default copy constructor Called !!!";
+    *this = objet;
 }
 
+WrongCat    &WrongCat::operator=(const WrongCat &objet)
+{
+    std::cout << "WrongCat:: Default copy Assignment Called" << std::endl;
+    if (this != &objet)
+        this->type = objet.type;
+    return (*this);
+}
 
+void    WrongCat::makeSound(void) const
+{
+    std::cout << "Wouuuuuuf default" << std::endl;
+}

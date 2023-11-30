@@ -6,7 +6,7 @@
 /*   By: ayael-ou <ayael-ou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 14:18:47 by ayael-ou          #+#    #+#             */
-/*   Updated: 2023/11/30 14:36:27 by ayael-ou         ###   ########.fr       */
+/*   Updated: 2023/11/30 22:07:24 by ayael-ou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,11 @@ class   Animal
     public :
     
     Animal();
-    Animal(const Animal &animal);
+    Animal(const Animal &_animal);
     ~Animal();
-    virtual void    makeSound()const;
+    Animal  &operator=(const Animal &_animal);
     std::string getType()const;
-    Animal &operator=(const Animal &animal);
+    virtual void    makeSound()const;
 };
 
 

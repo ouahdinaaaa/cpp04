@@ -12,29 +12,32 @@
 
 #include "WrongAnimal.hpp"
 
-WrongAnimal::WrongAnimal() : type("Grrrrrrr")
+WrongAnimal::WrongAnimal()
 {
-    std::cout << "WrongAnimal :: Default constructor Callded !!! " << std::endl;
+    std::cout << "WrongAnimal:: Default constructor Called !!!" << std::endl;
+    this->type = "ouahdina";
 }
 
 WrongAnimal::~WrongAnimal()
 {
-    std::cout << "WrongAnimal :: Default Destructot Called !!!" << std::endl;
+    std::cout << "WrongAnimal:: Default destructor Called !!!!" << std::endl;
 }
 
-WrongAnimal::WrongAnimal(const WrongAnimal &animal)
+WrongAnimal::WrongAnimal(const WrongAnimal &objet)
 {
-    *this = animal;
+    std::cout << "WrongAnimal:: Default copy constructor Called !!!" << std::endl;
+    *this = objet;
 }
 
-WrongAnimal &WrongAnimal::operator=(const WrongAnimal &animal)
+WrongAnimal     &WrongAnimal::operator=(const WrongAnimal &objet)
 {
-    if (this != &animal)
-        this->type = animal.type;
-    return *this;
+    std::cout << "WrongAnimal:: Default Assignement copy Called !!!!" << std::endl;
+    if (this != &objet)
+        this->type = objet.type;
+    return (*this);
 }
 
 void       WrongAnimal::makeSound(void)const
 {
-    std::cout << "WrongAnimal :: Default sounds :" << type << std::endl;
+    std::cout << "WrongAnimal:: sound of you " << std::endl;
 }

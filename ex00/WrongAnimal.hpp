@@ -25,9 +25,12 @@ class WrongAnimal
 
     public:
     WrongAnimal();
-    WrongAnimal(const WrongAnimal &animal);
     ~WrongAnimal();
+    WrongAnimal(const WrongAnimal &objet);
+    WrongAnimal&    operator=(const WrongAnimal &objet);
+
     void    makeSound(void) const;
+
 };
 
 #endif

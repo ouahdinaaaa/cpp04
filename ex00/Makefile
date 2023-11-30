@@ -6,7 +6,7 @@
 #    By: ayael-ou <ayael-ou@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/29 14:17:32 by ayael-ou          #+#    #+#              #
-#    Updated: 2023/11/29 16:13:41 by ayael-ou         ###   ########.fr        #
+#    Updated: 2023/11/30 23:03:37 by ayael-ou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,6 +18,8 @@ SRCS = main.cpp\
 		Animal.cpp\
 		Cat.cpp\
 		Dog.cpp\
+		WrongAnimal.cpp\
+		WrongCat.cpp\
 
 OBJS = ${SRCS:.cpp=.o}
 CC = c++

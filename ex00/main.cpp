@@ -6,7 +6,7 @@
 /*   By: ayael-ou <ayael-ou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 14:38:39 by ayael-ou          #+#    #+#             */
-/*   Updated: 2023/11/29 22:26:55 by ayael-ou         ###   ########.fr       */
+/*   Updated: 2023/11/30 21:37:17 by ayael-ou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ const Animal*i = new Cat();
 
 std::cout << j->getType() << " " << std::endl;
 std::cout << i->getType() << " " << std::endl;
-i->makeSound(); //will output the cat sound!
 j->makeSound();
+i->makeSound(); //will output the cat sound!
 meta->makeSound();
 
 
