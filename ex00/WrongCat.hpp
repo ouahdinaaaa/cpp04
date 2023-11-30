@@ -23,6 +23,7 @@ class WrongCat : public WrongAnimal
 
     WrongCat();
     ~WrongCat();
+    WrongCat(const WrongCat &cat);
 };
 
 #endif

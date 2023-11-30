@@ -14,12 +14,17 @@
 
 WrongCat::WrongCat()
 {
-
+    std::cout << "WrongCat :: Default constructor called" << std::endl;
 }
 
 WrongCat::~WrongCat()
 {
+    std::cout << "WrongCat :: Default destructor Called !!!!" << std::endl;
+}
 
+WrongCat::WrongCat(const WrongCat &cat)
+{
+    std::cout << "WrongCat :: Default Copy constrcutor Called "
 }
 
 
