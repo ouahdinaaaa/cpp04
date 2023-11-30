@@ -6,7 +6,7 @@
 /*   By: ayael-ou <ayael-ou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 14:18:47 by ayael-ou          #+#    #+#             */
-/*   Updated: 2023/11/29 20:24:09 by ayael-ou         ###   ########.fr       */
+/*   Updated: 2023/11/29 22:27:25 by ayael-ou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ class   Animal
     
     Animal();
     ~Animal();
-    // std::string getType();
+    std::string getType()const;
     virtual void    makeSound()const;
 };
 
