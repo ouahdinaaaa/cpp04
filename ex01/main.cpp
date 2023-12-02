@@ -6,28 +6,36 @@
 /*   By: ayael-ou <ayael-ou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 14:38:39 by ayael-ou          #+#    #+#             */
-/*   Updated: 2023/12/01 06:52:29 by ayael-ou         ###   ########.fr       */
+/*   Updated: 2023/12/01 18:56:27 by ayael-ou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
-#include "WrongAnimal.hpp"
 #include "Cat.hpp"
-#include "WrongCat.hpp"
 #include "Dog.hpp"
+#include "Brain.hpp"
 
 int main()
 {
-const WrongAnimal*meta = new WrongAnimal();
-const Animal*j = new Dog();
-const WrongAnimal*i = new WrongCat();
-
-std::cout << j->getType() << " " << std::endl;
-std::cout << i->getType() << " " << std::endl;
-j->makeSound();
-i->makeSound(); //will output the cat sound!
-meta->makeSound();
-
-
-return (0);
+	Animal* animals[10];
+	
+	for (int i = 0; i < 10; i++)
+	{
+		if (i >= 5)
+			animals[i] = new Dog();
+		else
+			animals[i] = new Cat();
+	}
+	Cat copy(*(Cat *)animals[0]);
+	std::cout << std::endl;
+	for (int i = 0; i < 100; i++)
+	{
+		std::cout << std::setw(30) << std::left << copy.getBrain()->getIdea(i);
+		std::cout << std::setw(30) << std::left << ((Cat *)animals[0])->getBrain()->getIdea(i) << std::endl;
+	}
+	std::cout << std::endl;
+	for (int i = 0; i < 10; i++)
+	{
+		delete animals[i];
+	}
 }

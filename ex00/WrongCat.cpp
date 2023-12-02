@@ -40,5 +40,6 @@ WrongCat    &WrongCat::operator=(const WrongCat &objet)
 
 void    WrongCat::makeSound(void) const
 {
-    std::cout << "Wouuuuuuf default" << std::endl;
+    WrongAnimal::makeSound();
+    std::cout << "WrongCat :: makeSound " << std::endl;
 }

@@ -37,6 +37,11 @@ WrongAnimal     &WrongAnimal::operator=(const WrongAnimal &objet)
     return (*this);
 }
 
+std::string WrongAnimal::getType() const
+{
+    return this->type;
+}
+
 void       WrongAnimal::makeSound(void)const
 {
     std::cout << "WrongAnimal:: sound of you " << std::endl;

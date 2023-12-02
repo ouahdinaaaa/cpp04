@@ -1,33 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ayael-ou <ayael-ou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/29 14:38:39 by ayael-ou          #+#    #+#             */
-/*   Updated: 2023/12/01 06:52:29 by ayael-ou         ###   ########.fr       */
+/*   Created: 2023/11/29 14:26:48 by ayael-ou          #+#    #+#             */
+/*   Updated: 2023/12/01 10:38:35 by ayael-ou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
-#include "WrongAnimal.hpp"
-#include "Cat.hpp"
-#include "WrongCat.hpp"
-#include "Dog.hpp"
+#include "Brain.hpp"
 
-int main()
+class Dog : public Animal
 {
-const WrongAnimal*meta = new WrongAnimal();
-const Animal*j = new Dog();
-const WrongAnimal*i = new WrongCat();
+    private:
+    Brain *braiin;
+    
+    public:   
+    Dog();
+    ~Dog();
+    Dog(const Dog &dog);
+    
+    Dog     &operator=(const Dog &dog);
+    Brain   *getBrain(void)const;
+    void    makeSound(void)const;
+    void    AddIdeaToBrain(int index, const std::string ideaas);
+};
 
-std::cout << j->getType() << " " << std::endl;
-std::cout << i->getType() << " " << std::endl;
-j->makeSound();
-i->makeSound(); //will output the cat sound!
-meta->makeSound();
-
-
-return (0);
-}

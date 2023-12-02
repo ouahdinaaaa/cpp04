@@ -1,33 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ayael-ou <ayael-ou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/29 14:38:39 by ayael-ou          #+#    #+#             */
-/*   Updated: 2023/12/01 06:52:29 by ayael-ou         ###   ########.fr       */
+/*   Created: 2023/11/29 14:35:03 by ayael-ou          #+#    #+#             */
+/*   Updated: 2023/12/01 10:36:55 by ayael-ou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
-#include "WrongAnimal.hpp"
-#include "Cat.hpp"
-#include "WrongCat.hpp"
-#include "Dog.hpp"
+#include "Brain.hpp"
 
-int main()
+class   Cat : public Animal
 {
-const WrongAnimal*meta = new WrongAnimal();
-const Animal*j = new Dog();
-const WrongAnimal*i = new WrongCat();
+    private :
+    Brain *braiin;
 
-std::cout << j->getType() << " " << std::endl;
-std::cout << i->getType() << " " << std::endl;
-j->makeSound();
-i->makeSound(); //will output the cat sound!
-meta->makeSound();
+    public :
+    Cat();
+    ~Cat();
+    Cat(const Cat &miaou);
+    Cat &operator=(const Cat &miaou);
+    Brain *getBrain()const;
 
-
-return (0);
-}
+    void    makeSound(void)const;
+    void    AddIdeasToBrain(int index, const std::string ideeas);
+};
