@@ -5,19 +5,17 @@
 #                                                     +:+ +:+         +:+      #
 #    By: ayael-ou <ayael-ou@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/11/29 14:17:32 by ayael-ou          #+#    #+#              #
-#    Updated: 2023/12/02 17:09:36 by ayael-ou         ###   ########.fr        #
+#    Created: 2023/12/02 17:09:13 by ayael-ou          #+#    #+#              #
+#    Updated: 2023/12/02 17:10:13 by ayael-ou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Animals
+
+NAME = Materia
 
 SRC_DIR = ./
 SRCS = main.cpp\
-		Animal.cpp\
-		Cat.cpp\
-		Dog.cpp\
-		Brain.cpp\
+		Materia.cpp\
 
 OBJS = ${SRCS:.cpp=.o}
 CC = c++
