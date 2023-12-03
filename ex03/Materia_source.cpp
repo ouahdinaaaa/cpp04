@@ -29,18 +29,19 @@ IMateriaSource::~IMateriaSource()
 void IMateriaSource::learnMateria(AMateria *m)
 {
     int i = -1;
-    while (++i < 4)
+    while (++i < 4){
         if (this->source[i] == nullptr){
             this->source[i] = m->clone();
             return;
+        }
     }
 }
 
-AMateria *IMateriaSource::createMateria(std::string const &type)const{
+AMateria *IMateriaSource::createMateria(const std::string &type)
+{
     int i = -1;
-    while (++i < 4)
-    {
-        if (this->source[i] != nullptr && this->source[i]->getType() == this->type)
+    while (++i < 4){
+        if (this->source[i] != nullptr && this->source[i]->getType() == type)
             return (this->source[i]->clone());
     }
     return nullptr;

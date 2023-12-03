@@ -6,7 +6,7 @@
 /*   By: ayael-ou <ayael-ou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/02 17:10:36 by ayael-ou          #+#    #+#             */
-/*   Updated: 2023/12/03 12:19:06 by ayael-ou         ###   ########.fr       */
+/*   Updated: 2023/12/03 18:09:23 by ayael-ou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ class AMateria
     protected :
     
     std::string _type;
-    AMateria    inventory[4];
     
     public :
     AMateria();

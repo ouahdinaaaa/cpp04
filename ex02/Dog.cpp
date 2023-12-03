@@ -6,7 +6,7 @@
 /*   By: ayael-ou <ayael-ou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 14:26:34 by ayael-ou          #+#    #+#             */
-/*   Updated: 2023/12/01 18:54:39 by ayael-ou         ###   ########.fr       */
+/*   Updated: 2023/12/03 17:21:34 by ayael-ou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,17 @@
 
 Dog::Dog() : Animal("Dog")
 {
-    std::cout << "Dog:: Default constructor Called !!!" << std::endl;
+    std::cout << "Dog(void):: Default constructor Called !!!" << std::endl;
     this->braiin = new Brain();
     if (!this->braiin){
         std::cout << "niette get out" << std::endl;
         exit(1);
     }
+}
+
+Dog::Dog(std::string name) : Animal((name)), braiin(new Brain())
+{
+    std::cout << "Dog:: [" << name << "] Constructor Called !!!" << std::endl;
 }
 
 Dog::~Dog()
@@ -28,10 +33,10 @@ Dog::~Dog()
     std::cout << "Dog:: Default destructor Called !!!!" << std::endl;   
 }
 
-Dog::Dog(const Dog &dog)
+Dog::Dog(const Dog &dog) : Animal(dog)
 {
     std::cout << "Dog:: Default Copy constrctor Called !!!!" << std::endl;
-    *this = dog;
+    this->braiin = new Brain(*dog.braiin);
 }
 
 Dog&    Dog::operator=(const Dog &dog)

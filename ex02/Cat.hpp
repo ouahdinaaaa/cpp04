@@ -6,7 +6,7 @@
 /*   By: ayael-ou <ayael-ou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 14:35:03 by ayael-ou          #+#    #+#             */
-/*   Updated: 2023/12/01 10:36:55 by ayael-ou         ###   ########.fr       */
+/*   Updated: 2023/12/03 17:40:53 by ayael-ou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,8 @@ class   Cat : public Animal
 
     public :
     Cat();
-    ~Cat();
+    Cat(std::string type);
+    virtual ~Cat();
     Cat(const Cat &miaou);
     Cat &operator=(const Cat &miaou);
     Brain *getBrain()const;

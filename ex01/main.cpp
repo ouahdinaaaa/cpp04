@@ -6,7 +6,7 @@
 /*   By: ayael-ou <ayael-ou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 14:38:39 by ayael-ou          #+#    #+#             */
-/*   Updated: 2023/12/02 16:42:23 by ayael-ou         ###   ########.fr       */
+/*   Updated: 2023/12/03 15:57:35 by ayael-ou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,3 +36,19 @@ int main()
 
 	return 0;
 }
+
+
+/*
+		Prblm dans creation : 
+		Animal
+		Dog
+		brain
+
+		Attendu :
+		Animal 
+		Brain 
+		Dog
+
+
+	voir cat car constructor de cat le fait tres bien...
+*/

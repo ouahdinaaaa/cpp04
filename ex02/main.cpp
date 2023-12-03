@@ -6,7 +6,7 @@
 /*   By: ayael-ou <ayael-ou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 14:38:39 by ayael-ou          #+#    #+#             */
-/*   Updated: 2023/12/02 16:56:28 by ayael-ou         ###   ########.fr       */
+/*   Updated: 2023/12/03 17:38:29 by ayael-ou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,10 @@
 
 int main(void)
 {
-	Animal *animal;
 	Cat cat;
 	Dog dog;
 
-	animal = &cat;
+	Animal *animal = &cat;
 	std::cout << animal->getType() << std::endl;
 	animal->makeSound();
 	animal = &dog;
@@ -48,14 +47,4 @@ pour code du dog bon
 
 Proceder destruction faux
 
-Attendu :
-		Dog
-		Brain
-		Animal
-
-resultat:
-		Brain
-		Dog
-		Animal
-A regler dans les deux exo:
 */

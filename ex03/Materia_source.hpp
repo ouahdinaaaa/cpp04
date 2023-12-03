@@ -6,7 +6,7 @@
 /*   By: ayael-ou <ayael-ou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/02 17:25:30 by ayael-ou          #+#    #+#             */
-/*   Updated: 2023/12/03 11:59:39 by ayael-ou         ###   ########.fr       */
+/*   Updated: 2023/12/03 18:54:23 by ayael-ou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 #include "Materia.hpp"
 
 
-class IMateriaSource : public IMateriaSource
+class IMateriaSource : public 
 {
     private :
     AMateria    *source[4];

@@ -6,7 +6,7 @@
 /*   By: ayael-ou <ayael-ou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 14:26:48 by ayael-ou          #+#    #+#             */
-/*   Updated: 2023/12/01 10:38:35 by ayael-ou         ###   ########.fr       */
+/*   Updated: 2023/12/03 17:42:49 by ayael-ou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ class Dog : public Animal
     
     public:   
     Dog();
+    Dog(std::string name);
     ~Dog();
     Dog(const Dog &dog);
     
