@@ -6,7 +6,7 @@
 /*   By: ayael-ou <ayael-ou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/02 17:17:32 by ayael-ou          #+#    #+#             */
-/*   Updated: 2023/12/02 17:32:21 by ayael-ou         ###   ########.fr       */
+/*   Updated: 2023/12/03 12:19:26 by ayael-ou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,11 @@
 # include <iomanip>
 #include "Materia.hpp"
 
-class ICharacter
+class ICharacter : public AMateria
 {
     private :
     std::string name;
+    AMateria    inventory[4];
 
     public:
     ICharacter();
