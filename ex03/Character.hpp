@@ -1,41 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Materia.hpp                                        :+:      :+:    :+:   */
+/*   Character.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ayael-ou <ayael-ou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/02 17:10:36 by ayael-ou          #+#    #+#             */
-/*   Updated: 2023/12/04 16:32:31 by ayael-ou         ###   ########.fr       */
+/*   Created: 2023/12/04 12:21:43 by ayael-ou          #+#    #+#             */
+/*   Updated: 2023/12/04 14:31:38 by ayael-ou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef AMATERIA_HPP
-#define AMATERIA_HPP
+#ifndef CHARACTER_HPP
+#define CHARACTER_HPP
 
 # include <string>
 # include <iostream>
 # include <cstdlib>
 # include <iomanip>
-# include "ICharacter.hpp"
+#include "ICharacter.hpp"
 
-class   ICharacter;
-
-class AMateria
+class Character : public ICharacter
 {
-    protected :
+    private:
+    std::string name;
+    AMateria*    _materia[4];
+        
+    public:
+    Character(const std::string &name);
+    Character(const Character &objs);
+    ~Character();
+
+    Character &operator=(const Character &objs);
+    std::string const &getName() const;
+    void    equip(AMateria *m);
+    void    unequip(int idx);
+    void    use(int idx, ICharacter &target);
     
-    std::string _type;
-    
-    public :
-    AMateria();
-    AMateria(const AMateria &objs);
-    AMateria(std::string const &type);
-    AMateria &operator=(const AMateria &objs);
-    virtual ~AMateria() = 0;
-    virtual AMateria* clone() const = 0; // 
-    virtual void use(ICharacter& target) = 0; // voir d'ou viens le Icharacter
-    std::string const &getType()const;
 };
 
 #endif

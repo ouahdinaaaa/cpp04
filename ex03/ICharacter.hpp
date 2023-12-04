@@ -6,7 +6,7 @@
 /*   By: ayael-ou <ayael-ou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/02 17:17:32 by ayael-ou          #+#    #+#             */
-/*   Updated: 2023/12/03 18:27:56 by ayael-ou         ###   ########.fr       */
+/*   Updated: 2023/12/04 17:37:16 by ayael-ou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 # include <iostream>
 # include <cstdlib>
 # include <iomanip>
-#include "Materia.hpp"
+# include "Materia.hpp"
 
 class AMateria;
 
@@ -26,12 +26,10 @@ class ICharacter
 {
     private :
     std::string name;
-    AMateria    *inventory[4];
 
     public:
-    ICharacter();
-    ICharacter(std::string const &name);
-    virtual ~ICharacter();
+    ICharacter(){};
+    virtual ~ICharacter(){};
     virtual std::string const & getName() const = 0;
     virtual void equip(AMateria* m) = 0;
     virtual void unequip(int idx) = 0;

@@ -1,43 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Materia.cpp                                        :+:      :+:    :+:   */
+/*   IMateriaSource.hpp                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ayael-ou <ayael-ou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/02 17:34:33 by ayael-ou          #+#    #+#             */
-/*   Updated: 2023/12/04 16:23:30 by ayael-ou         ###   ########.fr       */
+/*   Created: 2023/12/04 13:46:36 by ayael-ou          #+#    #+#             */
+/*   Updated: 2023/12/04 17:36:22 by ayael-ou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef IMATERIASOURCE_HPP
+#define IMATERIASOURCE_HPP
 #include "Materia.hpp"
 
-AMateria::AMateria()
+class IMateriaSource
 {
-}
-
-AMateria::~AMateria()
-{
+    public:
     
-}
+    IMateriaSource(){};
+    virtual ~IMateriaSource(){};
+    virtual void learnMateria(AMateria*) = 0;
+    virtual AMateria* createMateria(std::string const & type) = 0;
+};
 
-AMateria::AMateria(std::string const &type) : _type(type)
-{
-    
-}
-
-AMateria::AMateria(const AMateria &objs) : _type(objs._type)
-{
-    
-}
-
-AMateria &AMateria::operator=(const AMateria &objs)
-{
-    this->_type = objs._type;
-    return (*this);
-}
-
-
-std::string const &AMateria::getType() const{
-    return this->_type;
-}
+#endif

@@ -6,13 +6,17 @@
 /*   By: ayael-ou <ayael-ou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/02 17:27:06 by ayael-ou          #+#    #+#             */
-/*   Updated: 2023/12/03 18:54:40 by ayael-ou         ###   ########.fr       */
+/*   Updated: 2023/12/04 18:19:21 by ayael-ou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "Materia.hpp"
 # include "ICharacter.hpp"
+# include "Character.hpp"
+# include "Ice.hpp"
+# include "Cure.hpp"
 # include "Materia_source.hpp"
+
 
 int main()
 {

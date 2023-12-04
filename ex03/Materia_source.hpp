@@ -6,7 +6,7 @@
 /*   By: ayael-ou <ayael-ou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/02 17:25:30 by ayael-ou          #+#    #+#             */
-/*   Updated: 2023/12/03 18:54:23 by ayael-ou         ###   ########.fr       */
+/*   Updated: 2023/12/04 15:09:33 by ayael-ou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,19 +18,23 @@
 # include <cstdlib>
 # include <iomanip>
 #include "Materia.hpp"
+#include "IMateriaSource.hpp"
 
 
-class IMateriaSource : public 
+class MateriaSource : public IMateriaSource
 {
     private :
     AMateria    *source[4];
     
     public:
     
-    IMateriaSource();
-    virtual ~IMateriaSource() {}
-    virtual void learnMateria(AMateria*) = 0;
-    virtual AMateria* createMateria(std::string const & type) = 0;
+    MateriaSource();
+    ~MateriaSource();
+    MateriaSource(const MateriaSource &objs);
+    MateriaSource   &operator=(const MateriaSource &objs);
+    
+    void learnMateria(AMateria* m);
+    AMateria* createMateria(std::string const & type);
 };
 
 #endif

@@ -6,7 +6,7 @@
 #    By: ayael-ou <ayael-ou@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/02 17:09:13 by ayael-ou          #+#    #+#              #
-#    Updated: 2023/12/03 12:13:50 by ayael-ou         ###   ########.fr        #
+#    Updated: 2023/12/04 17:36:44 by ayael-ou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ SRCS = 	Ice.cpp\
 		main.cpp\
 		Cure.cpp\
 		Materia.cpp\
-		ICharacter.cpp\
+		Character.cpp\
 		Materia_source.cpp\
 
 OBJS = ${SRCS:.cpp=.o}

@@ -12,15 +12,26 @@
 
 #include "Cure.hpp"
 
-Cure::Cure() : AMateria("Cure")
+Cure::Cure() : AMateria("cure")
 {
 
 }
 
-Cure::~Cure()
+Cure::Cure(const Cure &objs) : AMateria(objs)
 {
 
 }
+
+Cure::~Cure(){
+
+}
+
+Cure &Cure::operator=(const Cure &objs)
+{
+    this->AMateria::operator=(objs);
+    return *this;
+}
+
 
 AMateria *Cure::clone()const
 {

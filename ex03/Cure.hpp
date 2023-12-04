@@ -15,12 +15,18 @@
 #include "Materia.hpp"
 
 
-class   Cure : public AMateria
+class Cure : public AMateria
 {
+    private :
+
+    public :
+
     Cure();
     ~Cure();
-    AMateria *clone()const;
-    void      use(ICharacter &target);
+    Cure(const Cure &objs);
+    Cure& operator=(const Cure &objs);
+    virtual AMateria *clone()const;
+    void    use(ICharacter &target);
 
 };
 

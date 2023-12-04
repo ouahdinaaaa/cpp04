@@ -12,37 +12,70 @@
 
 #include "Materia_source.hpp"
 
-IMateriaSource::IMateriaSource()
+MateriaSource::MateriaSource()
 {
     int i = -1;
     while (++i < 4)
-        source[i] = nullptr;
+        this->source[i] = NULL;
 }
 
-IMateriaSource::~IMateriaSource()
+MateriaSource::~MateriaSource()
 {
     int i = -1;
     while (++i < 4)
-        delete source[i];
+        if (this->source[i])
+            delete this->source[i];
 }
 
-void IMateriaSource::learnMateria(AMateria *m)
+MateriaSource::MateriaSource(const MateriaSource &objs)
 {
     int i = -1;
     while (++i < 4){
-        if (this->source[i] == nullptr){
-            this->source[i] = m->clone();
-            return;
+        if (this->source[i])
+            this->source[i] = objs.source[i]->clone();
+        else
+            this->source[i] = NULL;
+    }
+}
+
+MateriaSource& MateriaSource::operator=(const MateriaSource &objs)
+{
+    if (this != &objs)
+    {
+        this->~MateriaSource();
+        int i = -1;
+        while (++i < 4){
+            if (objs.source[i])
+                this->source[i] = objs.source[i]->clone();
+            else
+                this->source[i] = NULL;
         }
     }
+    return (*this);
 }
 
-AMateria *IMateriaSource::createMateria(const std::string &type)
+void MateriaSource::learnMateria(AMateria *m)
 {
     int i = -1;
     while (++i < 4){
-        if (this->source[i] != nullptr && this->source[i]->getType() == type)
+        if (!this->source[i])
+        {
+            this->source[i] = m;
+            break ;
+        }
+    }
+    if (this->source[0])
+        std::cout << this->source[0]->getType() << std::endl;
+    if (this->source[1])
+        std::cout << this->source[1]->getType() << std::endl;
+}
+
+AMateria *MateriaSource::createMateria(const std::string &type)
+{
+    int i = -1;
+    while (++i < 4){
+        if (this->source[i] != NULL && this->source[i]->getType() == type)
             return (this->source[i]->clone());
     }
-    return nullptr;
+    return NULL;
 }
