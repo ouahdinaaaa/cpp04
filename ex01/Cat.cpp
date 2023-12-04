@@ -6,7 +6,7 @@
 /*   By: ayael-ou <ayael-ou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 14:34:38 by ayael-ou          #+#    #+#             */
-/*   Updated: 2023/12/03 17:21:05 by ayael-ou         ###   ########.fr       */
+/*   Updated: 2023/12/04 21:51:05 by ayael-ou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 Cat::Cat(): Animal("cat")
 {
-    std::cout << "Cat(void):: Default constructor Called !!!" << std::endl;
+    std::cout << MAGENTA << "😸 Cat(void):: Default constructor Called !!!" << std::endl;
     this->braiin = new Brain();
     if (!this->braiin){
         std::cout << "rateer " << std::endl;
@@ -25,24 +25,24 @@ Cat::Cat(): Animal("cat")
 
 Cat::Cat(std::string type) : Animal(type), braiin(new Brain())
 {
-    std::cout << "cat:: [" << type << "] Constructor Called" << std::endl;
+    std::cout << MAGENTA << "😸 Cat:: [" << type << "] Constructor Called" << std::endl;
 }
 
 Cat::Cat(const Cat &miaou) : Animal(miaou)
 {
-    std::cout << "Cat:: Copy constructor Called on " << miaou.getType() << "!!!" << std::endl;
+    std::cout << MAGENTA << "😸 Cat:: Copy constructor Called on " << miaou.getType() << "!!!" << std::endl;
     this->braiin = new Brain(*miaou.braiin);
 }
 
 Cat::~Cat()
 {
     delete this->braiin;
-    std::cout << "Cat:: Default destructor Called !!!" << std::endl;
+    std::cout << MAGENTA << "😵 Cat:: Default destructor Called !!!" << std::endl;
 }
 
 Cat &Cat::operator=(const Cat &miaou)
 {
-    std::cout << "Cat:: Assignement copy Called !!!!" << std::endl;
+    std::cout << MAGENTA << "😸 Cat:: Assignement copy Called !!!!" << std::endl;
     if (this != &miaou)
     {
         this->type = miaou.type;
@@ -57,7 +57,7 @@ Cat &Cat::operator=(const Cat &miaou)
 
 void    Cat::makeSound(void) const
 {
-    std::cout << "Miaouuuuuu" << std::endl;
+    std::cout << MAGENTA << " 😸 Miaouuuuuu 😸" << std::endl;
 }
 
 Brain *Cat::getBrain()const

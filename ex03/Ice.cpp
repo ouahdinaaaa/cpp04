@@ -11,6 +11,10 @@
 /* ************************************************************************** */
 
 #include "Ice.hpp"
+# define BLUE "\033[34m"
+# define RESET "\033[1;97m"
+
+
 
 Ice::Ice(): AMateria("ice")
 {
@@ -34,7 +38,7 @@ Ice &Ice::operator=(const Ice &objs)
 
 void    Ice::use(ICharacter &target)
 {
-    std::cout << "* shoot an ice bolt at " << target.getName() << " *" << std::endl;
+    std::cout << BLUE << "*⚡shoot an ice bolt at " << target.getName() << " ⚡*" << RESET <<  std::endl;
 }
 
 AMateria    *Ice::clone() const

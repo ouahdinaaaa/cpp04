@@ -64,10 +64,6 @@ void MateriaSource::learnMateria(AMateria *m)
             break ;
         }
     }
-    if (this->source[0])
-        std::cout << this->source[0]->getType() << std::endl;
-    if (this->source[1])
-        std::cout << this->source[1]->getType() << std::endl;
 }
 
 AMateria *MateriaSource::createMateria(const std::string &type)

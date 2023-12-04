@@ -11,6 +11,8 @@
 /* ************************************************************************** */
 
 #include "Cure.hpp"
+# define GREEN "\033[32m"
+# define RESET "\033[1;97m"
 
 Cure::Cure() : AMateria("cure")
 {
@@ -40,5 +42,5 @@ AMateria *Cure::clone()const
 
 void    Cure::use(ICharacter &target)
 {
-    std::cout << "* heals " << target.getName() << "'s wounds *" << std::endl;
+    std::cout << GREEN << "*❤️‍🩹 heals " << target.getName() << "'s wounds ❤️‍🩹*" << RESET << std::endl;
 }

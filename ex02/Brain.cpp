@@ -6,7 +6,7 @@
 /*   By: ayael-ou <ayael-ou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/01 09:11:45 by ayael-ou          #+#    #+#             */
-/*   Updated: 2023/12/01 12:06:49 by ayael-ou         ###   ########.fr       */
+/*   Updated: 2023/12/04 22:06:53 by ayael-ou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ Brain::Brain()
         this->ideas[index] = "default";
         index++;
     }
-    std::cout << "Brain :: Default constructor Called !!!" << std::endl;
+    std::cout << BLUE << "🧠 Brain :: Default constructor Called !!!" << std::endl;
 }
 
 Brain::Brain(std::string name)
@@ -29,17 +29,17 @@ Brain::Brain(std::string name)
         this->ideas[index] = name;
         index++;
     }
-    std::cout << "Brain :: Default constructor Called !!!" << std::endl;
+    std::cout  << BLUE << "🧠 Brain :: Default constructor Called !!!" << std::endl;
 }
 
 Brain::~Brain()
 {
-    std::cout << "Brain :: Default destrcutor Called !!!" << std::endl;
+    std::cout << BLUE << "🧠 Brain :: Default destrcutor Called !!!" << std::endl;
 }
 
 Brain::Brain(const Brain &objet)
 {
-    std::cout << "Brain :: Default copy constructor Called !!!" << std::endl;
+    std::cout << BLUE << "🧠 Brain :: Default copy constructor Called !!!" << std::endl;
     *this = objet;
 }
 
@@ -58,7 +58,7 @@ std::string Brain::getIdea(int index) const
 Brain   &Brain::operator=(const Brain &object)
 {
     int index = 0;
-    std::cout << "Brain :: Default assignement copy Called !!!!" << std::endl;
+    std::cout << BLUE << "🧠 Brain :: Default assignement copy Called !!!!" << std::endl;
     if (this != &object)
     {
         while (index < 100){

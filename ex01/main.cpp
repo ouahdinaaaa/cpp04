@@ -6,7 +6,7 @@
 /*   By: ayael-ou <ayael-ou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 14:38:39 by ayael-ou          #+#    #+#             */
-/*   Updated: 2023/12/03 15:57:35 by ayael-ou         ###   ########.fr       */
+/*   Updated: 2023/12/04 21:52:07 by ayael-ou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ int main()
 	const Animal* j = new Dog();
 	const Animal* i = new Cat();
 
-	std::cout << j->getType() << " " << std::endl;
-	std::cout << i->getType() << " " << std::endl;
+	std::cout << RED << "🐶 " << j->getType() << " " << std::endl;
+	std::cout << MAGENTA << "😸 " << i->getType() << " " << std::endl;
 
 	i->makeSound(); //will output the cat sound!
 	j->makeSound();
